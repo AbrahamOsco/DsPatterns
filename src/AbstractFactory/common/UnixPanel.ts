@@ -1,5 +1,5 @@
-import { Button } from "../good/Button/Button";
-import { Panel } from "../good/Panel/Panel";
+import { Button } from "../abstractions/Button/Button";
+import { Panel } from "../abstractions/Panel/Panel";
 
 export class UnixPanel implements Panel{
 

@@ -1,4 +1,4 @@
-import { Button } from "../good/Button/Button";
+import { Button } from "../abstractions/Button/Button";
 
 export class WindowsButton implements Button{
 

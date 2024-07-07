@@ -1,4 +1,4 @@
-import { Panel } from "../good/Panel/Panel";
+import { Panel } from "../abstractions/Panel/Panel";
 import { WindowsButton } from "./WindosButton";
 
 export class WindowsPanel implements Panel{

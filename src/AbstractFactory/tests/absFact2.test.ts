@@ -1,6 +1,6 @@
-import { Application } from "../good/Application";
-import { WindowsControlFactory } from "../good/ControlFactory/WindowsControlFactory";
-import { UnixControlFactory } from "../good/ControlFactory/UnixControlFactory";
+import { Application } from "../abstractions/Application";
+import { WindowsControlFactory } from "../abstractions/ControlFactory/WindowsControlFactory";
+import { UnixControlFactory } from "../abstractions/ControlFactory/UnixControlFactory";
 import { UnixButton } from "../common/UnixButton";
 import { UnixPanel } from "../common/UnixPanel";
 
@@ -25,7 +25,7 @@ test('create windows factory and create a button and panel', () => {
 
 test('we create the application using a generic factory', () => {
     const windowsFactory = new WindowsControlFactory()
-    const unixFactory = new WindowsControlFactory()
+    const unixFactory = new UnixControlFactory()
     const winAplication = new Application(windowsFactory)
     const unixAplication = new Application(unixFactory)
     expect(winAplication).not.toBeNull()
