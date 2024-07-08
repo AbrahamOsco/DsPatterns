@@ -18,7 +18,10 @@ class b2PolygonShape{
 }
 
 class PhysicsFacade{
-
+    +PhysicsFacade(gravity:number)
+    +createBody(posX:numbe, posY:number, width:number, height:number, friction:number):b2Body
+    +step(timeStep:number, velIter: number, posIter: number):void
+    +getWorld():b2World
 }
 class AplicationFront{
 

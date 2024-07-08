@@ -9,8 +9,5 @@ test('testing physicsFacade', () => {
     const velocityIteration = 8
     const positionIteration = 3
     physics.step(timeStep, velocityIteration, positionIteration);
-    console.log(`${dynamicBody.GetPosition().x}, ${dynamicBody.GetPosition().y}`);
     expect(physics.getWorld().GetBodyList()).toEqual(dynamicBody);
 });
-
-

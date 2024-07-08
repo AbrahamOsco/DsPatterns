@@ -1,3 +1,4 @@
+import Box2D from 'box2dweb';
 
 export class PhysicsFacade{
     private world: Box2D.Dynamics.b2World;
