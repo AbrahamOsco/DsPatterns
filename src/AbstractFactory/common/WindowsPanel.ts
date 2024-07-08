@@ -1,14 +1,8 @@
+import { Button } from "../abstractions/Button/Button";
 import { Panel } from "../abstractions/Panel/Panel";
 import { WindowsButton } from "./WindosButton";
 
 export class WindowsPanel implements Panel{
-
-    public add(button: WindowsButton) {
-
-    }
-
-    public draw() {
-
-    }
-    
+    public add(button: WindowsButton) {}
+    public draw() {}
 }

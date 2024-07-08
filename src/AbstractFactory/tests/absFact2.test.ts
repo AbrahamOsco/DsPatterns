@@ -1,33 +1,27 @@
 import { Application } from "../abstractions/Application";
 import { WindowsControlFactory } from "../abstractions/ControlFactory/WindowsControlFactory";
 import { UnixControlFactory } from "../abstractions/ControlFactory/UnixControlFactory";
-import { UnixButton } from "../common/UnixButton";
-import { UnixPanel } from "../common/UnixPanel";
+import { ControlFactory } from "../abstractions/ControlFactory/ControlFactory";
 
-
-    // ok creamos una windowsFactory, unixFactory
-    // Tenemos dos clases concretas seguimos dependiendo del os
-    // si tenemos una application que debe recbir tanto el WindowsControlFactory como el UnixControlFactory como hacemos? 
-    // answer -> we need to create an Abstraction.
+    // ok creamos una windowsControlFactory (idem todo con UnixControlFactory)
+    // Tenemos dos factory concretas cada una sigue dependiendo del os
 test('create windows factory and create a button and panel', () => {
-    const windowsFactory = new WindowsControlFactory()
-    const unixFactory = new UnixControlFactory()
-    const unixButton = new UnixButton()
-    const unixPanel = new UnixPanel()
+    const windowsFactory :WindowsControlFactory = new WindowsControlFactory()
     const winButton =  windowsFactory.createButton()  
     const winPanel = windowsFactory.createPanel()
     winPanel.add(winButton)
     expect(winPanel).not.toBeNull()
 });
 
-
-// creamos una abstraccion para la factory.
-
+    // si tenemos una application que debe recbir tanto el WindowsControlFactory como el UnixControlFactory como hacemos? 
+    // we need to create an Abstraction de la fabrica.
+    // creamos un ControlFactory una abstraccion para las factorys.
 test('we create the application using a generic factory', () => {
-    const windowsFactory = new WindowsControlFactory()
-    const unixFactory = new UnixControlFactory()
+    const windowsFactory :ControlFactory = new WindowsControlFactory()
+    const unixFactory : ControlFactory = new UnixControlFactory  ()
     const winAplication = new Application(windowsFactory)
     const unixAplication = new Application(unixFactory)
     expect(winAplication).not.toBeNull()
     expect(unixAplication).not.toBeNull()
 });
+

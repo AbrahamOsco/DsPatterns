@@ -1,15 +1,16 @@
 import { WindowsButton } from "../../common/WindosButton";
 import { WindowsPanel } from "../../common/WindowsPanel";
+import { Button } from "../Button/Button";
+import { Panel } from "../Panel/Panel";
 import { ControlFactory } from "./ControlFactory";
 
 export class WindowsControlFactory implements ControlFactory{
     
-    public createButton() : WindowsButton {
+    public createButton() : Button {
         return new WindowsButton()
     }
     
-    public createPanel() : WindowsPanel{
+    public createPanel() : Panel{
         return new WindowsPanel()
     }
-
 }
