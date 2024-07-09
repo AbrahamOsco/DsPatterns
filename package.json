@@ -19,6 +19,8 @@
   },
   "dependencies": {
     "@types/box2d": "^0.0.39",
-    "box2dweb": "^2.1.0-b"
+    "@types/crypto-js": "^4.2.2",
+    "box2dweb": "^2.1.0-b",
+    "crypto-js": "^4.2.0"
   }
 }
