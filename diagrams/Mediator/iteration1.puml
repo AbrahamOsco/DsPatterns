@@ -5,14 +5,12 @@ interface Components{
 }
 class Warrior{
     -name:string;
-    -mediator:Mediator;
     +getName():string
     +setMediator(mediator :Mediator):void
     +attackRobot(damage:number):void
 }
 class Medic{
     -name:string;
-    -mediator:Mediator;
     +getName():string;
     +setMediator(mediator :Mediator):void
     +healRobot(someHp:number):void
@@ -21,7 +19,6 @@ class Medic{
 class Robot{
     -name:string;
     -hp:number
-    -mediator:Mediator;
     +getName():string;
     +setMediator(mediator :Mediator):void
     +receiveAttack(damage: number):void
@@ -46,5 +43,8 @@ Mediator <|.. BattleMediator
 BattleMediator "1" *-- "1" Warrior
 BattleMediator "1" *-- "1" Robot
 BattleMediator "1" *-- "1" Medic
+Warrior --> Mediator
+Robot --> Mediator
+Medic --> Mediator
 
 @enduml
