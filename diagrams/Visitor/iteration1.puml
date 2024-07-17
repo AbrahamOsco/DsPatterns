@@ -1,12 +1,11 @@
 @startuml
-class WorkerHuman{
+abstract class WorkerHuman{
     #name: string;
     #salary: number;
     +WorkerHuman(name: string, salary:number);
     +getName():string
     +getSalary():number
     {abstract}+accept(visitor: Visitor):string
-
 }
 
 class Developer{

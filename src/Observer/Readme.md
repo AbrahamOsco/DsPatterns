@@ -16,4 +16,7 @@ En el ejemplo tenemos:
 
 <img src="../../diagrams/Observer/img/iteration1.png">
 
+1. **Los deletes**: hay algo interesante en **public deleteObserver(observer: Observer): void** es que con (!==) comparamos referencias asi que si le pasamos 
+    el mismo objeto q agregamos antes lo elimianra sin problemas. lo mismo ocurre en java con un this.observers.remove(observer); lo eliminamos (dejando la implementacion por deafault de equals que compara referencias, si la sobrescribimos por ej en java cambiaria).
+1. 
 
